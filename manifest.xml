@@ -11,8 +11,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Reply with Attachment" />
   <Description DefaultValue="Outlook add-in to reply with attachments." />
-  <IconUrl DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply32.png" />
-  <HighResolutionIconUrl DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply80.png" />
+  <IconUrl DefaultValue="https://haadith.github.io/officeReply/reply32.png" />
+  <HighResolutionIconUrl DefaultValue="https://haadith.github.io/officeReply/reply80.png" />
   <SupportUrl DefaultValue="http://saga.co.yu/support" />
 
   <!-- Permissions -->
@@ -28,7 +28,7 @@
     <Form xsi:type="ItemRead">
       <!-- Entry point URL -->
       <DesktopSettings>
-        <SourceLocation DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/index.html" />
+        <SourceLocation DefaultValue="https://haadith.github.io/officeReply/index.html" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -74,13 +74,13 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply32.png"/>
-        <bt:Image id="icon32" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply32.png"/>
-        <bt:Image id="icon80" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply80.png"/>
+        <bt:Image id="icon16" DefaultValue="https://haadith.github.io/officeReply/reply32.png"/>
+        <bt:Image id="icon32" DefaultValue="https://haadith.github.io/officeReply/reply32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://haadith.github.io/officeReply/reply80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="funcFile" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/function-file.html"/>
-        <bt:Url id="readPaneUrl" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/index.html"/>
+        <bt:Url id="funcFile" DefaultValue="https://haadith.github.io/officeReply/function-file.html"/>
+        <bt:Url id="readPaneUrl" DefaultValue="https://haadith.github.io/officeReply/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Reply with Attachments"/>
