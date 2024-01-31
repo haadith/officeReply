@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+           xsi:type="MailApp">
+
+  <Id>0f777d78-3789-440e-aaa6-79b5ff729501</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Saga d.o.o. Beograd</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Reply with Attachment" />
+  <Description DefaultValue="Outlook add-in to reply with attachments." />
+  <IconUrl DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply32.png" />
+  <HighResolutionIconUrl DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply80.png" />
+  <SupportUrl DefaultValue="http://saga.co.yu/support" />
+
+  <!-- Permissions -->
+  <Permissions>ReadWriteMailbox</Permissions>
+
+  <!-- Hosts -->
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+
+  <!-- Form factors -->
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <!-- Entry point URL -->
+      <DesktopSettings>
+        <SourceLocation DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/index.html" />
+        <RequestedHeight>250</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <!-- Version overrides -->
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Requirements>
+      <Sets DefaultMinVersion="1.1">
+        <Set Name="Mailbox" MinVersion="1.1"/>
+      </Sets>
+    </Requirements>
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <!-- Location of the UI-less function file -->
+          <FunctionFile resid="funcFile" />
+          <!-- Add-in button on the ribbon -->
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="msgReadGroup">
+                <Label resid="groupLabel" />
+                <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                  <Label resid="paneReadButtonLabel" />
+                  <Supertip>
+                    <Title resid="paneReadSuperTipTitle" />
+                    <Description resid="paneReadSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16" />
+                    <bt:Image size="32" resid="icon32" />
+                    <bt:Image size="80" resid="icon80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="readPaneUrl" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply32.png"/>
+        <bt:Image id="icon32" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply32.png"/>
+        <bt:Image id="icon80" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/reply80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="funcFile" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/function-file.html"/>
+        <bt:Url id="readPaneUrl" DefaultValue="file://saga.co.yu/saga/Interni IT/Install/Outlook/ReplyWithAttachments/index.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="groupLabel" DefaultValue="Reply with Attachments"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="Reply with Attachments"/>
+        <bt:String id="paneReadSuperTipTitle" DefaultValue="Reply with Attachments"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="paneReadSuperTipDescription" DefaultValue="Click to open the Reply with Attachments pane."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+
+</OfficeApp>
